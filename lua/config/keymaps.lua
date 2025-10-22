@@ -3,3 +3,23 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("i", "jk", "<Esc>")
+
+function ToggleTerminal(cwd)
+  Snacks.terminal({
+    "pwsh.exe",
+    "-NoExit",
+    "-Command",
+    [[&{Import-Module "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"; Enter-VsDevShell bcb9ea00 -SkipAutomaticLocation -DevCmdArguments """-arch=x64 -host_arch=x64"""}]],
+  }, {
+    position = "float",
+    cwd = cwd or LazyVim.root(),
+  })
+end
+
+vim.api.nvim_create_user_command("FTerm", ToggleTerminal, { desc = "Float Terminal (Root Dir)" })
+vim.keymap.set({ "n", "t" }, "<leader>ft", ToggleTerminal, { desc = "Float Terminal (Root Dir)", noremap = true })
+vim.keymap.set({ "n", "t" }, "<leader>fT", function()
+  local dir = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":p:h")
+  ToggleTerminal(dir)
+end, { desc = "Float Terminal (file dir)", noremap = true })
+vim.keymap.set({ "n", "t" }, "<c-\\>", ToggleTerminal, { desc = "Toggle Terminal", noremap = true })

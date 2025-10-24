@@ -4,6 +4,18 @@
 			{
 				"language": "all",
 				"path": "./all_file_types.json"
+			},
+			{
+				"language": "python",
+				"path": "./python.json"
+			},
+			{
+				"language": "cmake",
+				"path": "./cmake.json"
+			},
+			{
+				"language": "cpp,c",
+				"path": "./cpp.json"
 			}
 		]
 	},

@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.o.shell = "pwsh.exe"
+vim.o.wrap = true

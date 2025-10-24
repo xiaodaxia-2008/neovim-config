@@ -19,6 +19,11 @@ scoop bucket add versions
 scoop install versions/lua51
 ```
 
+## 安装 `pynvim`
+
+```
+uv tool install --update pynvim --with neovim
+```
 
 ## 安装 Fira Code Nerd Font
 

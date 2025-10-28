@@ -36,7 +36,9 @@ class Zpp(object):
             return
         headerpath = pathlib.Path(filename)
         cpppath = headerpath.with_suffix(".cpp")
-        m = re.match(r"(.*)/[iI]nclude/(.*)", filename)
+        self.nvim.out_write(f"{headerpath=}\n")
+        m = re.match(r"(.*)/[iI]+nclude/(.*)", filename)
+        self.nvim.out_write(f"{m=}\n")
         if m:
             src_dir = pathlib.Path(m.group(1)) / "Src"
             if src_dir.exists():

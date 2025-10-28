@@ -12,3 +12,10 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
   command = "silent! wall",
   nested = true,
 })
+
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = { "markdown" },
+--   callback = function()
+--     vim.wo.conceallevel = 0
+--   end,
+-- })

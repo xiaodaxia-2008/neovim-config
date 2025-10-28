@@ -5,14 +5,16 @@
 vim.keymap.set("i", "jk", "<Esc>")
 
 function ToggleTerminal(cwd)
+  cwd = cwd or LazyVim.root()
+  -- expand to absolute path to ensure same terminal ID of same directory
+  cwd = vim.fn.fnamemodify(cwd, ":p")
   Snacks.terminal({
     "pwsh.exe",
     "-NoExit",
     "-Command",
     [[&{Import-Module "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"; Enter-VsDevShell bcb9ea00 -SkipAutomaticLocation -DevCmdArguments """-arch=x64 -host_arch=x64"""}]],
   }, {
-    position = "float",
-    cwd = cwd or LazyVim.root(),
+    cwd = cwd,
   })
 end
 

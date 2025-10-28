@@ -25,3 +25,5 @@ vim.keymap.set({ "n", "t" }, "<leader>fT", function()
   ToggleTerminal(dir)
 end, { desc = "Float Terminal (file dir)", noremap = true })
 vim.keymap.set({ "n", "t" }, "<c-\\>", ToggleTerminal, { desc = "Toggle Terminal", noremap = true })
+
+vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })

@@ -8,7 +8,7 @@
       " * @file $TM_FILENAME",
       " * @author: Zen Shawn",
       " * @email: xiaozisheng2008@hotmail.com",
-      " * @date: $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND, $CURRENT_MONTH_NAME $CURRENT_DATE, $CURRENT_YEAR",
+      " * @date: $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND, $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
       " */",
       ""
     ]

@@ -14,7 +14,11 @@
 				"path": "./cmake.json"
 			},
 			{
-				"language": "cpp,c",
+				"language": "cpp",
+				"path": "./cpp.json"
+			},
+			{
+				"language": "c",
 				"path": "./cpp.json"
 			}
 		]

@@ -28,4 +28,12 @@ vim.keymap.set({ "n", "t" }, "<c-\\>", function()
   Snacks.terminal({ "pwsh.exe" })
 end, { desc = "Toggle Float Terminal", noremap = true })
 
+vim.keymap.set({ "n", "t" }, "<c-/>", function()
+  Snacks.terminal.toggle(nil, { cwd = LazyVim.root() })
+end, { desc = "Toggle Bottom Terminal", noremap = true })
+
+vim.keymap.set({ "n", "t" }, "<c-_>", function()
+  Snacks.terminal.toggle(nil, { cwd = LazyVim.root() })
+end, { desc = "Toggle Bottom Terminal", noremap = true })
+
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })

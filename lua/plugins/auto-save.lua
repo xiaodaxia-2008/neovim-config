@@ -7,6 +7,6 @@ return {
   opts = {
     -- your config goes here
     -- or just leave it empty :)
-    debounce_delay = 2000,
+    debounce_delay = 3000,
   },
 }

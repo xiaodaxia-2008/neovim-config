@@ -8,3 +8,7 @@ vim.o.wrap = true
 -- How to get markdown always to display the source code
 -- https://github.com/LazyVim/LazyVim/discussions/269
 vim.wo.conceallevel = 0
+
+vim.o.softtabstop = 4
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
